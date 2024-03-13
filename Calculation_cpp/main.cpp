@@ -3,17 +3,17 @@
 
 using namespace std;
 
-int main() {
-
+int main(){
+    // FL39ST34-0404A
     double P_eng; // Мощность двигателя  (Вт)
 
     double f = 280.f; // Шаг/с номин.
-    const double alph = 22.5; // градусов
+    const double alph = 1.8; // градусов
 
 
     double n_nom = f / alph; //
     double w_nom = (PI * n_nom) / 30.f; // угловая скорость (рад/с)
-    double M_nom = 0.16; // Номинальный момент (Н*м)
+    double M_nom = 0.21; // Номинальный момент (Н*м)
     P_eng = M_nom * w_nom;
 
     cout << "P engine: " << P_eng << endl;
@@ -26,6 +26,7 @@ int main() {
     cout << "\n" << w_out << endl;
     double M_extra_out = 22;
     double P_n = M_extra_out * w_out;
+    cout << P_n << endl;
 
     double E = 1.2;
     double N0 = 0.8;
